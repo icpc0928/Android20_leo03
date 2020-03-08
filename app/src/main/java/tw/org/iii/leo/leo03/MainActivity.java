@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             row0.put(from[2], "2020-03-07 10:20:30");
             data.add(row0);
         }
-        //調變器 由他整合資料
+        //調變器 由他整合資料 只會處理文字資料
         simpleAdapter = new SimpleAdapter(this,data,R.layout.item,from , to);
         lv.setAdapter(simpleAdapter);
 
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         row0.put(from[2], "2020-03-07 10:20:30");
         data.add(0,row0);
         simpleAdapter.notifyDataSetChanged();
-        //通知調變器要改變資料惹
+        //通知調變器要改變資料惹 來同步一下
     }
 
 }
